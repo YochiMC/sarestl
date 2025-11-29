@@ -1,9 +1,9 @@
 import '../../assets/styles/layout.css'
-import { Header } from '../../components/Header'
+import {Header} from '../../components/Header'
 export function Layout({ children }) {
     return (
         <>
-            <Header />
+            <header className='stl-header'> Aquí va el fokin header </header>
             <div>
                 {children}
             </div>
