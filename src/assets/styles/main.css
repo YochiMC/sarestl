@@ -10,11 +10,11 @@
     --color-ui-light: #fff;
 
     --primary-color-font: #000;
-    --secondary-color-font: #FFF;
-
+    --secondary-color-font: #ffffff;
 }
 
 body{
     background-color: var(--third-bg-color);
-    color: var(--secondary-color-font)
+    color: var(--secondary-color-font);
+    margin: 0;
 }

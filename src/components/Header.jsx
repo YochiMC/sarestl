@@ -1,10 +1,9 @@
-import sepLogo from '../assets/sep.png'
-import tecnmLogo from '../assets/tecnm.jpg'
-import itlLogo from '../assets/itl.png'
+import sepLogo from '../assets/img/sep.png';
+import tecnmLogo from '../assets/img/tecnm.jpg';
+import itlLogo from '../assets/img/itl.png';
 import { NavLink } from "react-router-dom";
-import '../styles/index.css'
 
-function HeaderExt() {
+function Header() {
     return (
         <div className="header-ext">
             <div className="logos">
@@ -15,11 +14,11 @@ function HeaderExt() {
 
             <nav className="nav-menu">
                 <NavLink to="/" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Inicio</NavLink>
-                <NavLink to="/manual" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Manual Usuario</NavLink>
-                <NavLink to="/acceso-visitantes" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Acceso Visitantes</NavLink>
+                <NavLink to="/" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Inicio</NavLink>
+                <NavLink to="/" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Inicio</NavLink>
             </nav>
         </div>
     );
 }
 
-export default HeaderExt;
+export default Header;

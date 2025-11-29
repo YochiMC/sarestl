@@ -7,3 +7,65 @@
     background-color: var(--color-ui-high);
     color: var(--secondary-color-font);
 }
+
+
+/* ------------------------------- HEADER ------------------------------- */
+.header-ext {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  background-color: var(--primary-bg-color);
+  color: var(--primary-color-font);
+}
+
+.logos {
+  display: flex; 
+  gap: 20px;
+}
+
+.logo-sep{
+  width: 165px;
+  height: 60px;
+}
+
+.logo-tecnm {
+  width: 120px;
+  height: 60px;
+}
+
+.logo-itl,
+.logo-sares {
+  width: 60px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 50px;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  white-space: nowrap; 
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-accent);
+}
+
+/* --------------------------------- FOOTER ----------------------------------- */
+.footer {
+  display: flex;
+  background-color: #000000;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary-color-font);
+}
