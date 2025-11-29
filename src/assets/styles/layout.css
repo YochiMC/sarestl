@@ -1,0 +1,9 @@
+.stl-header {
+    background-color: var(--primary-bg-color);
+    color: var(--primary-color-font);
+}
+
+.stl-footer {
+    background-color: var(--color-ui-high);
+    color: var(--secondary-color-font);
+}

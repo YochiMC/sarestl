@@ -1,0 +1,20 @@
+:root{
+
+    --primary-bg-color: #FFF;
+    --secondary-bg-color: #EFECE3;
+    --third-bg-color: #8FABD4;
+
+    --color-ui-basic: #8FABD4;
+    --color-ui-medium: #4A70A9;
+    --color-ui-high: #000;
+    --color-ui-light: #fff;
+
+    --primary-color-font: #000;
+    --secondary-color-font: #FFF;
+
+}
+
+body{
+    background-color: var(--third-bg-color);
+    color: var(--secondary-color-font)
+}
