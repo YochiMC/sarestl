@@ -1,4 +1,5 @@
 import saresLogo from '../assets/img/sares.jpeg'
+import { Link } from "react-router-dom";
 
 export function Login() {
     return (
@@ -38,8 +39,11 @@ export function Login() {
                         </form>
 
                         <div className="form-options">
-                            <a href="#" className="link">¿Olvidaste tu contraseña?</a>
+                            <Link to="/olvidar-contraseña" className="link">
+                                ¿Olvidaste tu contraseña?
+                            </Link>
                         </div>
+
 
                         <div className="extra-options">
                             <p>¿No tienes cuenta?</p>
