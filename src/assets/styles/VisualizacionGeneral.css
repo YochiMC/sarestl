@@ -1,0 +1,433 @@
+.main-content_VG {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container_VG {
+    background-color: white;
+    width: 90%;
+    max-width: 1200px; 
+    border-radius: 2vh;
+    box-sizing: border-box;
+}
+
+#bienvenida {
+    text-align: center;
+    padding: 2vh;
+    color: #000;
+    font-size: 1.2em;
+}
+
+.table-header-VG {
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.export-button-VG {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+#dataTable_VG {
+    width: 100%;
+    margin: 10px 20px 20px 0;
+    border-collapse: collapse;
+    box-sizing: border-box;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    color: #000;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+th:hover {
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+.btn-edit, .btn-delete {
+    border: none;
+    margin: 2px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.btn-edit {
+    background-color: #ffc107;
+    color: white;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    color: white;
+}
+
+.pagination-VG {
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 20px;    
+}
+
+.page-btn-active, .page-btn {
+    background-color: #f2f2f2;
+    color: black;
+    border: none;
+    padding: 8px 16px;
+    margin: 0 4px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.page-btn-active {
+    background-color: #007bff;
+    color: white;
+}
+#icon_vg{
+    margin-right: 8px;
+}
+
+
+/*para la responsibidad :)*/
+/* pantallas de mas 1200pixerles */
+@media (max-width: 1200px) {
+    .container_VG {
+        width: 95%; 
+    }
+    .main-content_VG {
+        padding: 15px;
+    }
+    #bienvenida {
+        font-size: 1.1em;
+    }
+    .table-header-VG {
+        font-size: 1em;
+    }
+    th, td {
+        padding: 6px;
+    }
+}
+
+/* pantallas de 992 pixeles*/
+@media (max-width: 992px) {
+    .container_VG {
+        width: 95%;
+    }
+    .main-content_VG {
+        padding: 15px;
+    }
+    #bienvenida {
+        font-size: 1em;
+    }
+    .table-header-VG {
+        font-size: 0.95em;
+    }
+    th, td {
+        padding: 6px;
+        font-size: 0.9em;
+    }
+    .btn-edit, .btn-delete {
+        padding: 4px 8px;
+        font-size: 0.9em;
+    }
+    .export-button-VG {
+        padding: 8px 16px;
+    }
+}
+
+/* pantallas de 768 pixeles*/
+@media (max-width: 768px) {
+    .main-content_VG {
+        padding: 10px;
+    }
+    .container_VG {
+        width: 100%;
+    }
+    #bienvenida {
+        font-size: 1em;
+        padding: 1vh;
+    }
+    .table-header-VG {
+        font-size: 0.9em;
+    }
+    th, td {
+        padding: 5px;
+        font-size: 0.9em;
+    }
+    .btn-edit, .btn-delete {
+        padding: 4px 8px;
+        font-size: 0.8em;
+    }
+    .pagination_VG {
+        font-size: 0.8em;
+    }
+    .export-button-VG {
+        padding: 6px 12px;
+    }
+}
+
+/*pantallas de 576 pixeles*/
+@media (max-width: 576px) {
+    .main-content_VG {
+        padding: 8px;
+    }
+    .container_VG {
+        width: 100%;
+    }
+    #bienvenida {
+        font-size: 0.9em;
+        padding: 1vh;
+    }
+    .table-header-VG {
+        font-size: 0.8em;
+    }
+    th, td {
+        padding: 4px;
+        font-size: 0.8em;
+    }
+    .btn-edit, .btn-delete {
+        padding: 3px 6px;
+        font-size: 0.7em;
+    }
+    .pagination_VG {
+        font-size: 0.7em;
+    }
+    .export-button-VG {
+        padding: 5px 10px;
+    }
+    .page-btn, .page-btn-active {
+        padding: 6px 12px;
+    }
+}
+
+/* pantallas chiqutis xd */
+@media (max-width: 360px) {
+    .main-content_VG {
+        padding: 5px;
+    }
+    .container_VG {
+        width: 100%;
+    }
+    #bienvenida {
+        font-size: 0.8em;
+        padding: 1vh;
+    }
+    .table-header-VG {
+        font-size: 0.8em;
+    }
+    th, td {
+        padding: 3px;
+        font-size: 0.75em;
+    }
+    .btn-edit, .btn-delete {
+        padding: 3px 6px;
+        font-size: 0.7em;
+    }
+    .pagination_VG {
+        font-size: 0.6em;
+    }
+    .export-button-VG {
+        padding: 4px 8px;
+    }
+    .page-btn, .page-btn-active {
+        padding: 5px 10px;
+    }
+}
+
+
+
+/* aqui se editajn los modals de edicion  y registro*/
+.modal-VG {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    overflow: auto; 
+    padding-top: 60px;
+    box-sizing: border-box;
+}
+
+.modal-content-VG {
+    background-color: white;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px; 
+    box-sizing: border-box;
+}
+
+.modal-header-VG {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.modal-title-VG {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.close-btn-VG {
+    font-size: 2em;
+    color: #888;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.close-btn-VG:hover {
+    color: #000;
+}
+
+.modal-body-VG {
+    padding: 15px 0;
+}
+
+.form-group-VG {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-control-VG {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-control-VG:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.modal-footer-VG {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.save-btn-VG, .cancel-btn-VG {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border: none;
+    margin-left: 10px;
+}
+
+.save-btn-VG {
+    background-color: #28a745;
+    color: white;
+}
+
+.save-btn-VG:hover {
+    background-color: #218838;
+}
+
+.cancel-btn-VG {
+    background-color: #dc3545;
+    color: white;
+}
+
+.cancel-btn-VG:hover {
+    background-color: #c82333;
+}
+
+.p_vg{
+    font-size: 1.1em;
+    color: black;
+}
+
+
+
+/*responsiviad para los mdoasl*/
+@media (max-width: 768px) {
+    .modal-content-VG {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .modal-title-VG {
+        font-size: 1.3em;
+    }
+
+    label {
+        font-size: 1em;
+    }
+
+    .form-control-VG {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    .save-btn-VG, .cancel-btn-VG {
+        padding: 8px 16px;
+        font-size: 1em;
+    }
+
+    .modal-footer-VG {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .save-btn-VG {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content-VG {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .modal-title-VG {
+        font-size: 1.2em;
+    }
+
+    label {
+        font-size: 0.9em;
+    }
+
+    .form-control-VG {
+        font-size: 0.85em;
+        padding: 7px;
+    }
+
+    .save-btn-VG, .cancel-btn-VG {
+        padding: 7px 14px;
+        font-size: 0.9em;
+    }
+}

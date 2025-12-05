@@ -39,7 +39,7 @@ export function Login() {
                         </form>
 
                         <div className="form-options">
-                            <Link to="/olvidar-contraseña" className="link">
+                            <Link to="/ManualMiembros" className="link">
                                 ¿Olvidaste tu contraseña?
                             </Link>
                         </div>

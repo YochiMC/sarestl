@@ -1,8 +1,7 @@
 import "../assets/styles/contraseña.css";
-import saresLogo from '../assets/img/sares.jpeg'
 import person_circleLogo from '../assets/img/person-circle.svg'
 import { Link } from "react-router-dom";
-export function OlvidarContraseña(){
+export function RestaurarContraseña(){
     return(
         <>
         <div className="ContenidoPrincipal">            
@@ -11,23 +10,32 @@ export function OlvidarContraseña(){
                     <img src={person_circleLogo} className="logotipo-sares" alt="" />                    
                  </div>
                  
-                <h2>Recuperar Contraseña</h2>
+                <h2>Restaurar Contraseña</h2>
                 <form>
-                    <label htmlFor="email">Correo Electrónico</label>
+                    <label htmlFor="email">Nueva Contraseña</label>
                     <input
-                        type="email"
-                        id="email"
-                        name="email"                        
-                        placeholder="example@example.com"
+                        type="password"
+                        id="password"
+                        name="password"                        
+                        placeholder="••••••••"
+                        required
+                    />
+
+                    <label htmlFor="email">Confirmar Nueva Contraseña</label>
+                    <input
+                        type="confirm-password"
+                        id="confirm-password"
+                        name="confirm-password"                        
+                        placeholder="••••••••"
                         required
                     />
                     <button type="submit" className="btn-recuperar">
-                        Enviar Instrucciones
+                        Guardar Cambios
                     </button>
                 </form>
                 <div className="form-return">
                     <Link to="/" className="link">
-                        Regresar
+                        Cancelar
                     </Link>
                 </div>
             </div>

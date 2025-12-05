@@ -10,9 +10,12 @@ import { Mas } from "./pages/Mas";
 import { Crud } from "./pages/Crud";
 import { Notificaciones } from "./pages/Notificaciones";
 import { HistorialRegUsers } from "./pages/HistorialRegUsers";
+import { RestaurarContraseña } from "./pages/RestaurarContraseña";
+import { ManualUsuarioMiembros } from './pages/ManualUsuarioMiembros';
+import { Perfil } from './pages/Perfil';
+import { VisualizacionGeneral } from './pages/VisualizacionGeneral';
 import { Layout } from "./pages/layouts/Layout";
 import { LayoutAdmin } from "./pages/layouts/LayoutAdmin";
-
 
 export function AppRouter() {
   return (
@@ -29,6 +32,10 @@ export function AppRouter() {
         <Route path="/crud" element={<LayoutAdmin children={<Crud />} />} />
         <Route path="/notificaciones" element={<LayoutAdmin children={<Notificaciones />} />} />
         <Route path="/historial-registros-usuarios" element={<LayoutAdmin children={<HistorialRegUsers />} />} />
+        <Route path="/ManualMiembros" element={<Layout children={<ManualUsuarioMiembros />} />} />
+        <Route path="/Perfil" element={<Layout children={<Perfil />} />} />
+        <Route path="/VisualizacionGeneral" element={<Layout children={<VisualizacionGeneral />} />} />
+        <Route path="/restaurar-contraseña" element={<Layout children={<RestaurarContraseña />} />} />
       </Routes>
     </BrowserRouter>
   )

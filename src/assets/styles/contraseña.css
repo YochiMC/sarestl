@@ -1,1 +1,118 @@
 /* -------------------------- CSS para el olvido y recuperación de contraseña ---------------------------*/
+.ContenidoPrincipal {
+    display: flex;
+    justify-content: center;
+}
+
+.OlvidarContraseña-Container {
+    margin-top: 30px;
+    width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    margin-bottom: 30px;
+}
+
+.ContenedorImagen {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    align-items: center;
+    height: auto;
+}
+
+.logotipo-sares {
+    width: 15vh;
+    height: 15vh;
+}
+
+.btn-recuperar {
+    width: 100%;
+    padding: 10px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-return {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+/*Responsividad*/
+
+/* tablets segun gugul*/
+@media (max-width: 768px) {
+    .OlvidarContraseña-Container {
+        width: 90%;  
+        padding: 15px; 
+    }
+
+    .logotipo-sares {
+        width: 20vh;
+        height: 20vh;
+    }
+
+    h2 {
+        font-size: 1.8rem; 
+    }
+
+    .btn-recuperar {
+        font-size: 14px; 
+        padding: 12px; 
+    }
+
+    .form-return {
+        flex-direction: column; 
+        align-items: center;
+    }
+}
+
+/*chiquitos*/
+@media (max-width: 480px) {
+    .OlvidarContraseña-Container {
+        width: 90%;  
+        padding: 15px;  
+        margin-top: 20px;
+    }
+
+    .logotipo-sares {
+        width: 25vh;  
+        height: 25vh;
+    }
+
+    h2 {
+        font-size: 1.5rem; 
+    }
+
+    .btn-recuperar {
+        font-size: 14px;  
+        padding: 12px 0;  
+    }
+
+    .form-return {
+        flex-direction: column; 
+        align-items: center;
+        justify-content: center;
+    }
+}
+
