@@ -1,15 +1,14 @@
 .stl-header {
-    background-color: var(--primary-bg-color);
-    color: var(--primary-color-font);
+  background-color: var(--primary-bg-color);
+  color: var(--primary-color-font);
 }
 
 .stl-footer {
-    background-color: var(--color-ui-high);
-    color: var(--secondary-color-font);
+  background-color: var(--color-ui-high);
+  color: var(--secondary-color-font);
 }
 
-
-/* ------------------------------- HEADER ------------------------------- */
+/* ------------------------------------------------ HEADER ------------------------------------------------ */
 .header-ext {
   display: flex;
   justify-content: space-between;
@@ -17,14 +16,21 @@
   padding: 10px 50px;
   background-color: var(--primary-bg-color);
   color: var(--primary-color-font);
+  position: relative;
 }
 
-.logos {
-  display: flex; 
+.logos,
+.logos-menu {
+  display: flex;
   gap: 20px;
+  align-items: center;
 }
 
-.logo-sep{
+.logos-menu {
+  display: none;
+}
+
+.logo-sep {
   width: 165px;
   height: 60px;
 }
@@ -39,6 +45,10 @@
   width: 60px;
 }
 
+.logo-sares-login {
+  display: none;
+}
+
 .nav-menu {
   display: flex;
   gap: 50px;
@@ -51,7 +61,8 @@
   border-bottom: 2px solid transparent;
   transition: all 0.3s ease;
   font-size: 0.95rem;
-  white-space: nowrap; 
+  white-space: nowrap;
+  color: inherit;
 }
 
 .nav-link:hover,
@@ -60,7 +71,423 @@
   border-bottom-color: var(--color-accent);
 }
 
-/* --------------------------------- FOOTER ----------------------------------- */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: var(--primary-color-font);
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.hamburger.open {
+  position: fixed;
+  top: 20px;
+  right: 32px;
+}
+
+
+@media (max-width: 1100px) {
+  .header-ext {
+    padding: 15px 20px;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+  }
+
+  .logo-sep {
+    width: 140px;
+    height: 50px;
+  }
+
+  .logo-tecnm {
+    width: 100px;
+    height: 50px;
+  }
+
+  .logo-itl,
+  .logo-sares,
+  .logo-sares-login {
+    width: 50px;
+    height: 50px;
+  }
+
+  .logos {
+    gap: 15px;
+  }
+
+  .logos-menu {
+    display: none;
+  }
+}
+
+
+@media (max-width: 945px) {
+  .header-ext {
+    padding: 15px 20px;
+  }
+
+  .logos-menu {
+    display: none;
+  }
+
+  .logo-sep {
+    display: none;
+  }
+
+  .logo-tecnm {
+    width: 100px;
+    height: 50px;
+  }
+
+  .logo-itl,
+  .logo-sares,
+  .logo-sares-login {
+    width: 50px;
+    height: 50px;
+  }
+
+  .logo-sares-login {
+    display: none;
+  }
+
+  .logos {
+    gap: 15px;
+  }
+
+  .logos-menu {
+    display: none;
+  }
+
+  .nav-menu {
+    gap: 42px !important;
+  }
+
+}
+
+
+@media (max-width: 770px) {
+  .header-ext {
+    padding: 15px 30px;
+  }
+
+  .nav-menu.open .header-ext {
+    background-color: rgba(0, 0, 0, 0);
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
+    display: block;
+  }
+
+  .nav-menu {
+    display: block;
+  }
+
+  .logo-sep {
+    display: block;
+  }
+
+  .logo-sep {
+    width: 140px;
+    height: 50px;
+  }
+
+  .logo-tecnm {
+    width: 100px;
+    height: 50px;
+  }
+
+  .logo-sares-login {
+    display: block;
+  }
+
+  .logo-itl,
+  .logo-sares,
+  .logo-sares-login {
+    width: 50px;
+    height: 50px;
+  }
+
+  .logos,
+  .logos-menu {
+    gap: 15px;
+  }
+
+  .logos-menu {
+    display: flex;
+    visibility: visible !important;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: fixed;
+    top: 0px;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0px 0px;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.87);
+  }
+
+  .nav-menu.open {
+    transform: translateX(0);
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    color: white;
+    margin-top: -42px
+  }
+
+  .nav-link,
+  .nav-link.active {
+    color: white !important;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .nav-link:hover,
+  .nav-link.active:hover {
+    background-color: rgba(90, 90, 90, 0.3);
+  }
+
+  .hamburger.open {
+    color: white;
+  }
+}
+
+@media (max-width: 515px) {
+  .header-ext {
+    padding: 10px 30px;
+  }
+
+  .nav-menu.open .header-ext {
+    background-color: rgba(0, 0, 0, 0);
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
+    display: block;
+  }
+
+  .nav-menu {
+    display: block;
+  }
+
+  .logo-sep {
+    display: none;
+  }
+
+  .logo-sep {
+    width: 140px;
+    height: 50px;
+  }
+
+  .logo-tecnm {
+    width: 100px;
+    height: 50px;
+  }
+
+  .logo-sares-login {
+    display: block;
+  }
+
+  .logo-itl,
+  .logo-sares,
+  .logo-sares-login {
+    width: 50px;
+    height: 50px;
+  }
+
+  .logos,
+  .logos-menu {
+    gap: 15px;
+  }
+
+  .logos-menu {
+    display: flex;
+    visibility: visible !important;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: fixed;
+    top: 0px;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0px 0px;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.87);
+  }
+
+  .nav-menu.open {
+    transform: translateX(0);
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    color: white;
+    margin-top: -42px
+  }
+
+  .nav-link,
+  .nav-link.active {
+    color: white !important;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .nav-link:hover,
+  .nav-link.active:hover {
+    background-color: rgba(90, 90, 90, 0.3);
+  }
+
+  .hamburger.open {
+    color: white;
+  }
+}
+
+@media (max-width: 355px) {
+  .header-ext {
+    padding: 10px 30px;
+    z-index: 1000;
+  }
+
+  .nav-menu {
+    display: block;
+  }
+
+  .nav-menu.open .header-ext {
+    background-color: rgba(0, 0, 0, 0);
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
+    display: block;
+  }
+
+  .logo-sep {
+    display: none;
+  }
+
+  .logo-sep {
+    width: 140px;
+    height: 50px;
+  }
+
+  .logo-tecnm {
+    display: none;
+  }
+
+  .logo-sares-login {
+    display: block;
+  }
+
+  .logo-itl,
+  .logo-sares,
+  .logo-sares-login {
+    width: 50px;
+    height: 50px;
+  }
+
+  .logos,
+  .logos-menu {
+    gap: 15px;
+  }
+
+  .logos-menu {
+    display: flex;
+    visibility: visible !important;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: fixed;
+    top: 0px;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0px 0px;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.87);
+  }
+
+  .nav-menu.open {
+    transform: translateX(0);
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    color: white;
+    margin-top: -42px
+  }
+
+  .nav-link,
+  .nav-link.active {
+    color: white !important;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .nav-link:hover,
+  .nav-link.active:hover {
+    background-color: rgba(90, 90, 90, 0.3);
+  }
+
+  .hamburger.open {
+    color: white;
+  }
+
+  .nombre-usuario {
+    display: none;
+  }
+
+  .icono-notificacion {
+    font-size: 1.7rem !important;
+  }
+
+  
+}
+
+/* ------------------------------------------------- FOOTER --------------------------------------------------- */
 .footer {
   display: flex;
   background-color: #000000;
@@ -68,4 +495,201 @@
   align-items: center;
   justify-content: center;
   color: var(--secondary-color-font);
+  text-align: center;
+  flex-wrap: wrap;
 }
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 20px;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+
+/* -------------------------------------------- ACORDEON ------------------------------------------------- */
+.acordeon-item {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #dcdcdc;
+  padding: 0;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.acordeon-header {
+  width: 100%;
+  background: #f5f5f5;
+  border: none;
+  padding: 14px 18px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: #333;
+  transition: background 0.25s ease;
+}
+
+.acordeon-header:hover {
+  background: #e9e9e9;
+}
+
+.flecha {
+  transition: transform 0.3s ease;
+  font-size: 14px;
+}
+
+.rotar {
+  transform: rotate(180deg);
+}
+
+.acordeon-contenido {
+  overflow: auto;
+  padding: 14px 18px;
+  font-size: 15px;
+  background: #fafafa;
+  color: #000000;
+  animation: abrir 0.3s ease;
+}
+
+@keyframes abrir {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ----------------------------------------- Header Interno ------------------------------------------ */
+.otros {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.icono-notificacion {
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.nombre-usuario {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.foto-usuario img {
+  border: 3px solid #63a94a;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.menu-usuario {
+  position: absolute;
+  top: 65px;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px 0;
+  width: 180px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+}
+
+.menu-item {
+  width: 100%;
+  padding: 10px 15px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+}
+
+.menu-item:hover {
+  background-color: #f3f3f3;
+}
+
+.icono-menu {
+  font-size: 18px;
+}
+
+.menu-notificaciones {
+  position: absolute;
+  top: 65px;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 0;
+  width: 350px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+}
+
+.titulo-notif {
+  font-weight: bold;
+  padding: 12px 10px;
+  margin: 0px;
+  border-bottom: 1px solid #ddd;
+  color: #000000;
+}
+
+.notif-item {
+  padding: 12px 15px;
+  gap: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: white;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.notif-item:hover {
+  background-color: #f3f3f3;
+}
+
+.notif-fecha {
+  font-size: 0.75rem;
+  color: #888;
+  margin-left: 10px;
+  white-space: nowrap;
+}
+
+.ver-todo-notif {
+  font-weight: bold;
+  text-align: center;
+  justify-content: center;
+  border-top: 1px solid #ddd;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.ver-todo-texto {
+  margin: 0;
+  color: blue;
+  cursor: pointer;
+  display: inline-block;
+  padding: 8px 0;
+}
+
+.ver-todo-texto:hover {
+  text-decoration: underline;
+}
+
