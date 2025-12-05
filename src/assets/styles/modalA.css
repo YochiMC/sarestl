@@ -1,0 +1,157 @@
+/* ----------------------------------------- MODAL A ----------------------------------------- */
+.modal-crud {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+}
+
+h2 {
+    color: #444;
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.btn-cerrar-modal-crud {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: transparent;
+    font-size: 24px;
+    cursor: pointer;
+    color: #444;
+}
+
+.btn-cerrar-modal-crud:hover {
+    color: #000;
+}
+
+.modal-content-crud {
+    background: rgb(255, 255, 255);
+    padding: 30px;
+    border-radius: 15px;
+    width: 500px;
+    animation: fadeIn 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    position: relative;
+}
+
+.modal-form-crud {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /*espacio entre inputs y botones*/
+}
+
+.form-grid-crud {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 40px;
+    row-gap: 0px;
+    align-items: start;
+}
+
+.form-group-crud {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group-crud label {
+    margin-bottom: 0px;
+    color: #444;
+}
+
+.form-group-crud input {
+    border: 1px solid #ccc;
+    background: white;
+    outline: none;
+    box-shadow: none;
+    border-radius: 5px;
+    width: 90%;
+    margin-top: 5px;
+}
+
+.form-group-crud select {
+    border: 1px solid #ccc;
+    background: white;
+    outline: none;
+    box-shadow: none;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.checkbox-row-crud {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    row-gap: 0px;
+}
+
+.checkbox-row-crud .activo {
+    display: flex;
+    align-items: center; 
+    gap: 8px; 
+    padding: 0;
+}
+
+.checkbox-row-crud .inactivo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+}
+
+.checkbox-row-crud input[type="radio"] {
+    width: 15px;  
+    height: 15px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.checkbox-row-crud label {
+    cursor: pointer;
+}
+
+.modal-buttons-crud {
+    display: flex;
+    gap: 20px;
+    margin-top: 15px; 
+    padding-top: 20px; 
+    border-top: 1px solid #ccc; 
+    justify-content: flex-end;
+}
+
+.btn-cancelar {
+    background: #aaa;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-guardar {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
