@@ -1,0 +1,256 @@
+.main-content_perfil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.container_perfil {
+    background-color: white;
+    width: 90%;    
+    border-radius: 2vh;
+}
+
+.header-perfil {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.profile-role {
+    font-size: 1rem;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.profile-card {    
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.profile-photo-container {      
+    position: relative;        
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.photo-overlay {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #007bff;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* estilo par fomulario*/
+.form-container-perfil {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-section {
+    margin-bottom: 15px;
+}
+
+.section-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.form-group {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #666;
+}
+
+.new-password {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #666;
+    cursor: pointer;
+}
+
+.confirm-password {
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.form-footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cancel-button {
+    background-color: #ccc;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.save-button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* Tablet */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .profile-role {
+        font-size: 0.9rem;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-group {
+        flex: 1 1 100%;
+    }
+
+    .profile-photo-container {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-photo {
+        width: 100%;
+        height: 100%;
+    }
+
+    .profile-card {
+        padding: 15px;
+    }
+
+    .photo-overlay {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+/*chiquis*/
+@media (max-width: 480px) {
+    .main-content_perfil {
+        padding: 15px;
+    }
+
+    .page-title {
+        font-size: 1.8rem;
+    }
+
+    .page-subtitle {
+        font-size: 1rem;
+    }
+
+    .profile-header {
+        font-size: 1.2rem;
+    }
+
+    .profile-card {
+        padding: 15px;
+    }
+
+    .profile-photo-container {
+        width: 80px;
+        height: 80px;
+    }
+
+    .profile-photo {
+        width: 100%;
+        height: 100%;
+    }
+
+    .form-footer {
+        margin-top: 15px;
+    }
+
+    .cancel-button,
+    .save-button {
+        padding: 8px 15px;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-group {
+        flex: 1 1 100%;
+    }
+
+    .photo-overlay {
+        width: 28px;
+        height: 28px;
+    }
+}
+
