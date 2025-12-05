@@ -1,0 +1,135 @@
+.manual-usuario {
+   background-color: white;
+    border-radius: 20px;
+    margin: 40px;
+}
+
+.global {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+    color: rgb(0, 0, 0);
+}
+
+.global h1 {
+    color: #000000;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.global p {
+    margin-top: 0px;
+}
+
+.contenido-manual {
+    display: flex;
+}
+
+.informacion {
+    flex: 1;
+    position: relative;
+    box-sizing: border-box;
+    padding-right: 0;                 
+    background: transparent; 
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.informacion::after {
+    content: "";
+    position: absolute;
+    right: 0;                
+    top: 0;                  
+    width: 1px;              
+    height: 95%;              
+    background-color: #d6d6d6;
+}
+
+.contenido-info {
+    background-color: #EFECE3;
+    border-left: 6px solid #4A70A9;
+    padding: 20px; 
+    margin: 20px;
+    color: black;
+    border-radius: 0px;
+    width: 70%;
+    height: 82%;
+}
+
+.manual-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.manual-header h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.icono-texto {
+    font-size: 28px;
+    color: #000000;
+}
+
+.cont-pasos {
+    background-color: #8FABD4;
+}
+
+.manual {
+    flex: 1;
+    padding: 20px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.info h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.icono-video {
+    font-size: 30px;
+    color: #000000;
+}
+
+.video-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-box video {
+    width: 80%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+.info p {
+    margin-top: 0;
+    color: #000000;
+}

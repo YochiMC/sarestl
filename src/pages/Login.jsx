@@ -6,7 +6,7 @@ export function Login() {
         <>
             <div className="contenido">
                 <div className="imagen">
-                    <img src={saresLogo} className="logo-sares" alt="" />
+                    <img src={saresLogo} className="logo-sares-tl" alt="" />
                     <p className="frase">¡Bienvenido a nuestro sistema!</p>
                 </div>
 
