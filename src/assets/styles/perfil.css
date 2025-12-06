@@ -160,44 +160,7 @@
     cursor: pointer;
 }
 
-
-/* Tablet */
-@media (max-width: 768px) {
-    .page-title {
-        font-size: 2rem;
-    }
-
-    .profile-role {
-        font-size: 0.9rem;
-    }
-
-    .form-row {
-        flex-direction: column;
-    }
-
-    .form-group {
-        flex: 1 1 100%;
-    }
-
-    .profile-photo-container {
-        width: 100px;
-        height: 100px;
-    }
-
-    .profile-photo {
-        width: 100%;
-        height: 100%;
-    }
-
-    .profile-card {
-        padding: 15px;
-    }
-
-    .photo-overlay {
-        width: 32px;
-        height: 32px;
-    }
-}
+/*estilos para responvidad*/
 
 /*chiquis*/
 @media (max-width: 480px) {
@@ -254,3 +217,79 @@
     }
 }
 
+/* Tablet */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .profile-role {
+        font-size: 0.9rem;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-group {
+        flex: 1 1 100%;
+    }
+
+    .profile-photo-container {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-photo {
+        width: 100%;
+        height: 100%;
+    }
+
+    .profile-card {
+        padding: 15px;
+    }
+
+    .photo-overlay {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+
+/* Pantallas grandes */
+@media (min-width: 1024px) {
+    .page-title {
+        font-size: 3rem;
+    }
+
+    .profile-role {
+        font-size: 1.2rem;
+    }
+
+    .profile-card {
+        padding: 30px;
+    }
+
+    .profile-photo-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile-photo {
+        width: 100%;
+        height: 100%;
+    }
+
+    .form-container-perfil {
+        padding: 30px;
+    }
+
+    .form-group {
+        flex: 1 1 45%;
+    }
+
+    .photo-overlay {
+        width: 36px;
+        height: 36px;
+    }
+}

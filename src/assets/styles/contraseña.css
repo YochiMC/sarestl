@@ -60,33 +60,6 @@ h2 {
 
 /*Responsividad*/
 
-/* tablets segun gugul*/
-@media (max-width: 768px) {
-    .OlvidarContraseña-Container {
-        width: 90%;  
-        padding: 15px; 
-    }
-
-    .logotipo-sares {
-        width: 20vh;
-        height: 20vh;
-    }
-
-    h2 {
-        font-size: 1.8rem; 
-    }
-
-    .btn-recuperar {
-        font-size: 14px; 
-        padding: 12px; 
-    }
-
-    .form-return {
-        flex-direction: column; 
-        align-items: center;
-    }
-}
-
 /*chiquitos*/
 @media (max-width: 480px) {
     .OlvidarContraseña-Container {
@@ -116,3 +89,55 @@ h2 {
     }
 }
 
+/* tablets segun gugul*/
+@media (max-width: 768px) {
+    .OlvidarContraseña-Container {
+        width: 90%;  
+        padding: 15px; 
+    }
+
+    .logotipo-sares {
+        width: 20vh;
+        height: 20vh;
+    }
+
+    h2 {
+        font-size: 1.8rem; 
+    }
+
+    .btn-recuperar {
+        font-size: 14px; 
+        padding: 12px; 
+    }
+
+    .form-return {
+        flex-direction: column; 
+        align-items: center;
+    }
+}
+
+/* grandes */
+@media (min-width: 1024px) {
+    .OlvidarContraseña-Container {
+        width: 400px; 
+        padding: 20px;
+    }
+
+    .logotipo-sares {
+        width: 15vh; 
+        height: 15vh;
+    }
+
+    h2 {
+        font-size: 2rem;  
+    }
+
+    .btn-recuperar {
+        font-size: 16px;  
+        padding: 10px;
+    }
+    .form-return {
+        flex-direction: row;  
+        align-items: center;
+    }
+}
