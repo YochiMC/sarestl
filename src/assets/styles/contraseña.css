@@ -59,31 +59,30 @@ h2 {
 }
 
 /*Responsividad*/
-
 /*chiquitos*/
 @media (max-width: 480px) {
     .OlvidarContraseña-Container {
-        width: 90%;  
-        padding: 15px;  
+        width: 90%;
+        padding: 15px;
         margin-top: 20px;
     }
 
     .logotipo-sares {
-        width: 25vh;  
+        width: 25vh;
         height: 25vh;
     }
 
     h2 {
-        font-size: 1.5rem; 
+        font-size: 1.5rem;
     }
 
     .btn-recuperar {
-        font-size: 14px;  
-        padding: 12px 0;  
+        font-size: 14px;
+        padding: 12px 0;
     }
 
     .form-return {
-        flex-direction: column; 
+        flex-direction: column;
         align-items: center;
         justify-content: center;
     }
@@ -92,8 +91,8 @@ h2 {
 /* tablets segun gugul*/
 @media (max-width: 768px) {
     .OlvidarContraseña-Container {
-        width: 90%;  
-        padding: 15px; 
+        width: 90%;
+        padding: 15px;
     }
 
     .logotipo-sares {
@@ -102,16 +101,16 @@ h2 {
     }
 
     h2 {
-        font-size: 1.8rem; 
+        font-size: 1.8rem;
     }
 
     .btn-recuperar {
-        font-size: 14px; 
-        padding: 12px; 
+        font-size: 14px;
+        padding: 12px;
     }
 
     .form-return {
-        flex-direction: column; 
+        flex-direction: column;
         align-items: center;
     }
 }
@@ -119,25 +118,26 @@ h2 {
 /* grandes */
 @media (min-width: 1024px) {
     .OlvidarContraseña-Container {
-        width: 400px; 
+        width: 400px;
         padding: 20px;
     }
 
     .logotipo-sares {
-        width: 15vh; 
+        width: 15vh;
         height: 15vh;
     }
 
     h2 {
-        font-size: 2rem;  
+        font-size: 2rem;
     }
 
     .btn-recuperar {
-        font-size: 16px;  
+        font-size: 16px;
         padding: 10px;
     }
+
     .form-return {
-        flex-direction: row;  
+        flex-direction: row;
         align-items: center;
     }
 }
