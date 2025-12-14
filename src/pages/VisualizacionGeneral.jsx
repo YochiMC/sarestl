@@ -87,7 +87,7 @@ export function VisualizacionGeneral() {
                     <div class="modal-header-VG">
                         <h3 class="modal-title-VG">Editar Registro</h3>                        
                         <button class="close-btn-VG" onClick={closeModals}>&times;</button>                        
-                    </div>
+                    </div>                    
                     <div class="modal-body-VG">
                         <form id="editForm_VG">
                             <input type="hidden" id="editId"></input>

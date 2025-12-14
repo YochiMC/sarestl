@@ -10,7 +10,7 @@
 .container_VG {
     background-color: white;
     width: 90%;
-    max-width: 1200px; 
+    max-width: 1200px;
     border-radius: 2vh;
     box-sizing: border-box;
 }
@@ -82,7 +82,7 @@ th:hover {
 .pagination-VG {
     margin-top: 20px;
     text-align: center;
-    margin-bottom: 20px;    
+    margin-bottom: 20px;
 }
 
 .page-btn-active, .page-btn {
@@ -99,7 +99,8 @@ th:hover {
     background-color: #007bff;
     color: white;
 }
-#icon_vg{
+
+#icon_vg {
     margin-right: 8px;
 }
 
@@ -108,17 +109,21 @@ th:hover {
 /* pantallas de mas 1200pixerles */
 @media (max-width: 1200px) {
     .container_VG {
-        width: 95%; 
+        width: 95%;
     }
+
     .main-content_VG {
         padding: 15px;
     }
+
     #bienvenida {
         font-size: 1.1em;
     }
+
     .table-header-VG {
         font-size: 1em;
     }
+
     th, td {
         padding: 6px;
     }
@@ -129,23 +134,29 @@ th:hover {
     .container_VG {
         width: 95%;
     }
+
     .main-content_VG {
         padding: 15px;
     }
+
     #bienvenida {
         font-size: 1em;
     }
+
     .table-header-VG {
         font-size: 0.95em;
     }
+
     th, td {
         padding: 6px;
         font-size: 0.9em;
     }
+
     .btn-edit, .btn-delete {
         padding: 4px 8px;
         font-size: 0.9em;
     }
+
     .export-button-VG {
         padding: 8px 16px;
     }
@@ -156,27 +167,34 @@ th:hover {
     .main-content_VG {
         padding: 10px;
     }
+
     .container_VG {
         width: 100%;
     }
+
     #bienvenida {
         font-size: 1em;
         padding: 1vh;
     }
+
     .table-header-VG {
         font-size: 0.9em;
     }
+
     th, td {
         padding: 5px;
         font-size: 0.9em;
     }
+
     .btn-edit, .btn-delete {
         padding: 4px 8px;
         font-size: 0.8em;
     }
+
     .pagination_VG {
         font-size: 0.8em;
     }
+
     .export-button-VG {
         padding: 6px 12px;
     }
@@ -187,30 +205,38 @@ th:hover {
     .main-content_VG {
         padding: 8px;
     }
+
     .container_VG {
         width: 100%;
     }
+
     #bienvenida {
         font-size: 0.9em;
         padding: 1vh;
     }
+
     .table-header-VG {
         font-size: 0.8em;
     }
+
     th, td {
         padding: 4px;
         font-size: 0.8em;
     }
+
     .btn-edit, .btn-delete {
         padding: 3px 6px;
         font-size: 0.7em;
     }
+
     .pagination_VG {
         font-size: 0.7em;
     }
+
     .export-button-VG {
         padding: 5px 10px;
     }
+
     .page-btn, .page-btn-active {
         padding: 6px 12px;
     }
@@ -221,48 +247,55 @@ th:hover {
     .main-content_VG {
         padding: 5px;
     }
+
     .container_VG {
         width: 100%;
     }
+
     #bienvenida {
         font-size: 0.8em;
         padding: 1vh;
     }
+
     .table-header-VG {
         font-size: 0.8em;
     }
+
     th, td {
         padding: 3px;
         font-size: 0.75em;
     }
+
     .btn-edit, .btn-delete {
         padding: 3px 6px;
         font-size: 0.7em;
     }
+
     .pagination_VG {
         font-size: 0.6em;
     }
+
     .export-button-VG {
         padding: 4px 8px;
     }
+
     .page-btn, .page-btn-active {
         padding: 5px 10px;
     }
 }
 
 
-
 /* aqui se editajn los modals de edicion  y registro*/
 .modal-VG {
-    display: none; 
+    display: none;
     position: fixed;
     z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
-    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
     padding-top: 60px;
     box-sizing: border-box;
 }
@@ -273,7 +306,7 @@ th:hover {
     padding: 20px;
     border-radius: 8px;
     width: 80%;
-    max-width: 600px; 
+    max-width: 600px;
     box-sizing: border-box;
 }
 
@@ -365,12 +398,10 @@ label {
     background-color: #c82333;
 }
 
-.p_vg{
+.p_vg {
     font-size: 1.1em;
     color: black;
 }
-
-
 
 /*responsiviad para los mdoasl*/
 @media (max-width: 768px) {

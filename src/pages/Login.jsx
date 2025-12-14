@@ -43,8 +43,7 @@ export function Login() {
                                 ¿Olvidaste tu contraseña?
                             </Link>
                         </div>
-
-
+                        
                         <div className="extra-options">
                             <p>¿No tienes cuenta?</p>
                             <a href="#" className="link">Crear cuenta</a>

@@ -35,7 +35,7 @@ export function AppRouter() {
         <Route path="/ManualMiembros" element={<Layout children={<ManualUsuarioMiembros />} />} />
         <Route path="/Perfil" element={<Layout children={<Perfil />} />} />
         <Route path="/VisualizacionGeneral" element={<Layout children={<VisualizacionGeneral />} />} />
-        <Route path="/restaurar-contraseña" element={<Layout children={<RestaurarContraseña />} />} />
+        <Route path="/restaurar-contraseña" element={<Layout children={<RestaurarContraseña />} />} />        
       </Routes>
     </BrowserRouter>
   )
