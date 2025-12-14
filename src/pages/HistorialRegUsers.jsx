@@ -89,6 +89,10 @@ export function HistorialRegUsers() {
                         <button className="btn-paginacion">3</button>
                         <button className="btn-paginacion">4</button>
                         <button className="btn-paginacion">5</button>
+                        <button className="btn-paginacion">2</button>
+                        <button className="btn-paginacion">3</button>
+                        <button className="btn-paginacion">4</button>
+                        <button className="btn-paginacion">5</button>
 
                         <button className="btn-paginacion">
                             <i className="fas fa-chevron-right"></i>

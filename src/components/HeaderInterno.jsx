@@ -25,12 +25,12 @@ function Header() {
 
 
     return (
-        <div className="header-ext" >
-            <div className="logos">
-                <img src={sepLogo} className="logo-sep" alt="" />
-                <img src={tecnmLogo} className="logo-tecnm" alt="" />
-                <img src={itlLogo} className="logo-itl" alt="" />
-                <img src={saresLogo} className="logo-sares" alt="" />
+        <div className="header-int" >
+            <div className="logos-int">
+                <img src={sepLogo} className="logo-sep-int" alt="" />
+                <img src={tecnmLogo} className="logo-tecnm-int" alt="" />
+                <img src={itlLogo} className="logo-itl-int" alt="" />
+                <img src={saresLogo} className="logo-sares-int" alt="" />
             </div>
 
             <div className="otros">
@@ -63,13 +63,13 @@ function Header() {
 
                         <div className="notif-item">
                             <i className="fas fa-info-circle"></i>
-                            <span>Mensajito very gu</span>
+                            <span className="mensaje-int">Ha realizado un registro</span>
                             <span className="notif-fecha">03/12/2025 - 10:45 AM</span>
                         </div>
 
                         <div className="notif-item">
                             <i className="fas fa-info-circle"></i>
-                            <span>Mensajito very gu</span>
+                            <span>Ha realizado un registro</span>
                             <span className="notif-fecha">04/12/2025 - 08:45 AM</span>
                         </div>
 

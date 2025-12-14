@@ -1,5 +1,5 @@
 .manual-usuario {
-   background-color: white;
+    background-color: white;
     border-radius: 20px;
     margin: 40px;
 }
@@ -31,27 +31,27 @@
     flex: 1;
     position: relative;
     box-sizing: border-box;
-    padding-right: 0;                 
-    background: transparent; 
+    padding-right: 0;
+    background: transparent;
     display: flex;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
 }
 
 .informacion::after {
     content: "";
     position: absolute;
-    right: 0;                
-    top: 0;                  
-    width: 1px;              
-    height: 95%;              
+    right: 0;
+    top: 0;
+    width: 1px;
+    height: 95%;
     background-color: #d6d6d6;
 }
 
 .contenido-info {
     background-color: #EFECE3;
     border-left: 6px solid #4A70A9;
-    padding: 20px; 
+    padding: 20px;
     margin: 20px;
     color: black;
     border-radius: 0px;
@@ -132,4 +132,109 @@
 .info p {
     margin-top: 0;
     color: #000000;
+}
+
+/* ---------------------------------------- RESPONSIVIDAD -------------------------------------- */
+@media (max-width: 1024px) {
+    .contenido-info {
+        width: 85%;
+        height: auto;
+    }
+
+    .video-box video {
+        width: 90%;
+    }
+
+    .manual-header h2,
+    .info h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .contenido-manual {
+        gap: 20px;
+    }
+
+    .contenido-info {
+        width: 90%;
+        margin: 15px;
+    }
+
+    .informacion::after {
+        height: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .manual-usuario {
+        margin: 20px 20px;
+        padding: 0px;
+    }
+
+    .contenido-manual {
+        flex-direction: column;
+    }
+
+    .informacion,
+    .manual {
+        width: 100%;
+    }
+
+    .informacion::after {
+        display: none;
+    }
+
+    .contenido-info {
+        width: 95%;
+        margin: 10px auto;
+        height: auto;
+    }
+
+    .manual {
+        padding-top: 0;
+        width: auto;
+    }
+
+    .video-box video {
+        width: 95%;
+    }
+
+    .global h1 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .global p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .manual-usuario {
+        margin: 20px 20px;
+        padding: 0px;
+    }
+
+    .contenido-info {
+        padding: 15px;
+    }
+
+    .acordeon-header {
+        font-size: 15px;
+        padding: 12px 14px;
+    }
+
+    .acordeon-contenido {
+        font-size: 14px;
+    }
+
+    .info h2,
+    .manual-header h2 {
+        font-size: 18px;
+    }
+
+    .manual {
+        width: auto;
+    }
 }
