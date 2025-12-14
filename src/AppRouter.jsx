@@ -24,9 +24,9 @@ export function AppRouter() {
         <Route path="/" element={<Layout children={<Login />} />} />
         <Route path="/olvidar-contraseña" element={<Layout children={<OlvidarContraseña />} />} />
         <Route path="/visitas" element={<Layout children={<Visitas />} />} />
-        <Route path="/dashboard" element={<Layout children={<Welcome />} />} />
+        <Route path="/dashboard" element={<LayoutAdmin children={<Welcome />} />} />
         <Route path="/registro" element={<Layout children={<Registro />} />} />
-        <Route path="/accesos" element={<Layout children={<Accesos />} />} />
+        <Route path="/accesos" element={<LayoutAdmin children={<Accesos />} />} />
         <Route path="/manual-de-usuario" element={<Layout children={<ManualUsuario />} />} />
         <Route path="/mas" element={<Layout children={<Mas />} />} />
         <Route path="/crud" element={<LayoutAdmin children={<Crud />} />} />
@@ -35,7 +35,7 @@ export function AppRouter() {
         <Route path="/ManualMiembros" element={<Layout children={<ManualUsuarioMiembros />} />} />
         <Route path="/Perfil" element={<Layout children={<Perfil />} />} />
         <Route path="/VisualizacionGeneral" element={<Layout children={<VisualizacionGeneral />} />} />
-        <Route path="/restaurar-contraseña" element={<Layout children={<RestaurarContraseña />} />} />        
+        <Route path="/restaurar-contraseña" element={<Layout children={<RestaurarContraseña />} />} />
       </Routes>
     </BrowserRouter>
   )
