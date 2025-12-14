@@ -5,86 +5,161 @@
     align-items: center;
 }
 
+.contenedor-notificaciones {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .contenedor-espacio-notificaciones {
     background-color: white;
     width: 1200px;
     height: 1400px;
-
-    overflow-y: auto;
-    scrollbar-width: thin;
     scrollbar-color: transparent transparent;
     border-radius: 8px;
+    overflow-y: auto;
+    scrollbar-width: none;
 }
 
+/* ---------------------------------- Barra título de Notificaciones ----------------------------------- */
 .titulo-notif-todas {
-  font-weight: bold;
-  padding: 20px 19px;
-  margin: 0px;
-  border-bottom: 1px solid #ddd;
-  color: black;
+    font-weight: bold;
+    padding: 20px 19px;
+    margin: 0px;
+    border-bottom: 1px solid #ddd;
+    color: black;
 }
 
-.contenedor-espacio-notificaciones::-webkit-scrollbar {
-    width: 6px;
-}
-.contenedor-espacio-notificaciones::-webkit-scrollbar-thumb {
-    background: transparent; 
-}
-.contenedor-espacio-notificaciones:hover::-webkit-scrollbar-thumb {
-    background: #cfcfcf;
-    border-radius: 10px;
+/* -------------------------------------------- TABLA ---------------------------------------------- */
+.tabla-notificaciones th {
+    background-color: #f3f4f6;
+    font-weight: 600;
 }
 
-.lista-notificaciones {
-    display: flex;
-    flex-direction: column;
+.tabla-notificaciones {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "Poppins", sans-serif;
 }
 
-.notificacion-item-i {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: white;
-    padding: 10px 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+.tabla-notificaciones td {
+    font-size: 14px;
+    color: #5f5f5f;
 }
 
-.notificacion-item:hover {
-    background: rgb(245, 245, 245);
+.tabla-notificaciones th,
+.tabla-notificaciones td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
 }
+
+.tabla-notificaciones tr:hover {
+    background-color: #f9fafb;
+}
+
+.tipo {
+    font-weight: 600;
+}
+
+.tipo.entrada {
+    color: #2e7d32;
+}
+
+.tipo.salida {
+    color: #c62828;
+}
+
+
+
+
+
 
 .icono-notificacion-i {
-    font-size: 20px;
+    font-size: 16px;
     color: #0d6efd;
     margin-right: 20px;
 }
 
-.notificacion-detalles {
-    display: flex;
-    align-items: center;
-    gap: 70px;   
-    flex: 1;   
+/* ========================================= RESPONSIVIDAD =========================================== */
+@media (max-width: 1200px) {
+    .contenedor-espacio-notificaciones {
+        width: 95%;
+        height: auto;
+        max-height: 1200px;
+    }
 }
 
-.texto-notificacion {
-    font-size: 16px;
-    color: #333;
-    margin: 0;
+@media (max-width: 768px) {
+    .contenedor-notificaciones {
+        padding: 20px;
+    }
+
+    .titulo-notif-todas {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    .tabla-notificaciones th,
+    .tabla-notificaciones td {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .icono-notificacion-i {
+        margin-right: 10px;
+        font-size: 14px;
+    }
 }
 
-.tipo-notificacion {
-    font-size: 14px;
-    font-weight: bold;
-    color: #198754;
+@media (max-width: 600px) {
+    .contenedor-espacio-notificaciones {
+        border-radius: 8px !important;
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+    }
+
+    .tabla-notificaciones {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .tabla-notificaciones thead {
+        font-size: 12px;
+    }
+
+    .tabla-notificaciones td {
+        font-size: 12px;
+        width: 100% !important;
+    }
+
+    .titulo-notif-todas {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .contenedor-notificaciones {
+        padding: 10px;
+    }
 }
 
-.tipo-notificacion.salida {
-    color: #dc3545;
-}
+@media (max-width: 480px) {
+    .contenedor-espacio-notificaciones {
+        border-radius: 8px !important;
+    }
 
-.fecha-notificacion {
-    font-size: 13px;
-    color: #777;
-    white-space: nowrap;
-    margin-left: 20px;
+    .tabla-notificaciones th,
+    .tabla-notificaciones td {
+        padding: 8px;
+        font-size: 11px;
+        width: 100% !important;
+    }
+
+    .icono-notificacion-i {
+        font-size: 12px;
+        margin-right: 6px;
+    }
 }

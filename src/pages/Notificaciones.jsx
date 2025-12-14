@@ -20,42 +20,62 @@ export function Notificaciones() {
 
                         <p className="titulo-notif-todas">Notificaciones</p>
 
-                        <div className="notificacion-item-i">
-                            <i className="fas fa-info-circle icono-notificacion-i"></i>
+                        <table className="tabla-notificaciones">
+                            <thead>
+                                <tr>
+                                    <th>Nota</th>
+                                    <th>Tipo</th>
+                                    <th>Fecha</th>
+                                    <th>Hora</th>
+                                </tr>
+                            </thead>
 
-                            <div className="notificacion-detalles">
-                                <p className="texto-notificacion">Ha realizado un registro</p>
-                                <p className="tipo-notificacion">Entrada</p>
-                            </div>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <i className="fas fa-info-circle icono-notificacion-i"></i>
+                                        Ha realizado un registro
+                                    </td>
+                                    <td className="tipo entrada">Entrada</td>
+                                    <td>03/12/2025</td>
+                                    <td>10:45 AM</td>
+                                </tr>
 
-                            <p className="fecha-notificacion">03/12/2025 - 10:45 AM</p>
-                        </div>
+                                <tr>
+                                    <td>
+                                        <i className="fas fa-info-circle icono-notificacion-i"></i>
+                                        Ha realizado un registro
+                                    </td>
+                                    <td className="tipo salida">Salida</td>
+                                    <td>03/12/2025</td>
+                                    <td>10:47 AM</td>
+                                </tr>
 
-                        <div className="notificacion-item-i">
-                            <i className="fas fa-info-circle icono-notificacion-i"></i>
+                                {notificaciones.map((item) => {
+                                    const [fecha, hora] = item.fecha.split(" - ");
 
-                            <div className="notificacion-detalles">
-                                <p className="texto-notificacion">Ha realizado un registro</p>
-                                <p className="tipo-notificacion salida">Salida</p>
-                            </div>
+                                    return (
+                                        <tr key={item.id}>
+                                            <td>
+                                                <i className="fas fa-info-circle icono-notificacion-i"></i>
+                                                {item.texto}
+                                            </td>
 
-                            <p className="fecha-notificacion">03/12/2025 - 10:47 AM</p>
-                        </div>
+                                            <td className={`tipo ${item.tipo === "Salida" ? "salida" : "entrada"}`}>
+                                                {item.tipo}
+                                            </td>
 
-                        {notificaciones.map((item) => (
-                            <div className="notificacion-item-i" key={item.id}>
-                                <i className="fas fa-info-circle icono-notificacion-i"></i>
+                                            <td>{fecha}</td>
+                                            <td>{hora}</td>
+                                        </tr>
+                                    );
+                                })}
+                            </tbody>
+                        </table>
 
-                                <div className="notificacion-detalles">
-                                    <p className="texto-notificacion">{item.texto}</p>
-                                    <p className={`tipo-notificacion ${item.tipo === "Salida" ? "salida" : ""}`}>
-                                        {item.tipo}
-                                    </p>
-                                </div>
 
-                                <p className="fecha-notificacion">{item.fecha}</p>
-                            </div>
-                        ))}
+
+
 
                     </div>
 
