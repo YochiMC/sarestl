@@ -1,3 +1,4 @@
+import { Scanner } from "../components/Scanner"
 export function Accesos() {
     return (
         <>
@@ -11,6 +12,7 @@ export function Accesos() {
                 </input>
                 <h2>Acceso con credencial</h2>
                 <p>Pon tu credencial cerca de la cámara</p>
+                <Scanner/>
             </div>
         </>
     )

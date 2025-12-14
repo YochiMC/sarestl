@@ -1,10 +1,24 @@
-let user_data = {'name' : 'Joseph', 'role' : 'user'}
+import styles from '../assets/styles/Welcome.module.css'
 
-export function Welcome(){
-    return(
+const user_data = { clave: '21240551', 'name': 'Joseph Alexander Martínez Cortés', 'role': 'alumnno' }
+
+export function Welcome() {
+    return (
         <>
-            <h1>Bienvenido {user_data.name}</h1>
-            <p>Tu rol es: {user_data.role}</p>
+            <div className={styles.mainContainer}>
+                <div className={styles.container}>
+                    <h1 className={styles.h1}>¡Bienvenido a nuestro SaresTL!</h1>
+                    <h2>Noticias</h2>
+                    <div>
+                        <span>Update 1</span>
+                        <span>Update 1</span>
+                        <span>Update 1</span>
+                        <span>Update 1</span>
+                        <span>Update 1</span>
+                        <span>Update 1</span>
+                    </div>
+                </div>
+            </div>
         </>
     )
 }
