@@ -46,7 +46,9 @@ export function Login() {
                         
                         <div className="extra-options">
                             <p>¿No tienes cuenta?</p>
-                            <a href="#" className="link">Crear cuenta</a>
+                            <Link to="/registro" className="link">
+                                Crear cuenta
+                            </Link>
                         </div>
                     </div>
                 </div>

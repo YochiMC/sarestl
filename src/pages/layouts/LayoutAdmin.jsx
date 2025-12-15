@@ -5,7 +5,7 @@ import '../../assets/styles/crud.css'
 import '../../assets/styles/notificaciones.css'
 import '../../assets/styles/modalA.css'
 
-const role = "alumno"
+const role = "guardia"
 
 export function LayoutAdmin({ children }) {
 
@@ -35,9 +35,9 @@ export function LayoutAdmin({ children }) {
         <>
             <Header />
             <Menu listItems={menu} />
-            <div>
+            <main>
                 {children}
-            </div>
+            </main>
             <Footer />
         </>
     )

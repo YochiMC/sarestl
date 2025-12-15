@@ -4,7 +4,6 @@
     justify-content: center;
     width: 100%;
     height: 100%;
-    margin: 20px;
 }
 
 .container{
@@ -13,8 +12,10 @@
     align-items: center;
     justify-content: center;
     background-color: white;
+    border-radius: 20px;
     height: 100%;
-    width: 70%;
+    width: 80%;
+    margin: 20px;
 }
 
 .form{
@@ -22,11 +23,40 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 1em;
     height: 100%;
-    width: 70%;
-    margin: 20px;
+    width: 80%;
+    margin: 2em;
+}
+
+.fieldset{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.legend{
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    color:black;
 }
 
 .h1{
+    margin-top: 1em;
     color: black;
+}
+
+.sendButton {
+    background-color: rgba(111, 174, 238, 1);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    height: 2.5em;
+    width: 10em;
+    cursor: pointer;
+    font-size: 1em;
+}  
+
+.sendButton:hover {
+    background-color: rgba(41, 128, 185, 1);
 }

@@ -1,0 +1,53 @@
+.etiquetaSelector {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.etiquetaInput {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    gap: 1em;
+}
+
+.input[type=text],
+.input[type=password],
+.input[type=email] {
+    height: 2.5em;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.input[type=tel],
+.input[type=number] {
+    height: 2.5em;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.input[type=date] {
+    background-color: #ecf0f1;
+    border: 1px solid #ecf0f1;
+    font-size: 18px;
+    color: #95a5a6;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.selector {
+    height: 2.5em;
+    width: 15em;
+    border-radius: 10px;
+    text-align: center;
+} 
+
+@media (max-width: 700px) {
+    .etiquetaInput {
+        width: 90%;
+    }
+}

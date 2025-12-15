@@ -1,11 +1,11 @@
-export function InputForm({ labelValue = "example:", inputType = "text", inputName, inputValue}) {
+import styles from '../../assets/styles/Forms.module.css';
+export function InputForm({ labelValue = "example:", inputType = "text", inputName, inputValue, inputPlaceholder = "example" }) {
     return (
         <>
-            <label>
+            <label htmlFor={inputName} className={styles.etiquetaInput}>
                 {labelValue}
+                <input name={inputName} value={inputValue} type={inputType} id={inputName} placeholder={inputPlaceholder} className={styles.input}/>
             </label>
-            <input name={inputName} value={inputValue} type={inputType}>
-            </input>
         </>
     )
 }

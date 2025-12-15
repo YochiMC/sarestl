@@ -48,7 +48,7 @@ function Header() {
 
                 <NavLink to="/" onClick={() => setOpen(false)} className="nav-link">Inicio</NavLink>
                 <NavLink to="/manual-de-usuario" onClick={() => setOpen(false)} className="nav-link">Manual Usuario</NavLink>
-                <NavLink to="/" onClick={() => setOpen(false)} className="nav-link">Acceso Visitantes</NavLink>
+                <NavLink to="/visitas" onClick={() => setOpen(false)} className="nav-link">Acceso Visitantes</NavLink>
                 <NavLink to="/mas" onClick={() => setOpen(false)} className="nav-link">Más</NavLink>
             </nav>
         </header>

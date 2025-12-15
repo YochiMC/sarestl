@@ -25,23 +25,23 @@ export function Registro() {
             case "alumno":
                 return (
                     <>
-                        <SelectForm selectName="carrera" listOptions={carreras} labelValue="Carrera: " />
-                        <InputForm labelValue="Semestre: " inputName="semestre" />
+                        <SelectForm selectName="carrera" listOptions={carreras} labelValue="Carrera " />
+                        <InputForm labelValue="Semestre: " inputName="semestre" inputType="number" inputPlaceholder="Válidos del 1 - 13" />
                     </>
                 )
             case "docente":
             case "administrador":
                 return (
-                    <InputForm labelValue="Departamento: " inputName="departamento" />
+                    <InputForm labelValue="Departamento: " inputName="departamento" inputPlaceholder="Ingresa el departamento al que perteneces..." />
                 )
             case "guardia":
             case "intendente":
                 return (
-                    <InputForm labelValue="Empresa: " inputName="empresa" />
+                    <InputForm labelValue="Empresa: " inputName="empresa" inputPlaceholder="Ingresa el nombre de la empresa a la que perteneces..." />
                 )
             case "administrativo":
                 return (
-                    <InputForm labelValue="Area: " inputName="area" />
+                    <InputForm labelValue="Area: " inputName="area" inputPlaceholder="Ingresa el nombre del area al que perteneces...|" />
                 )
             default:
                 return null
@@ -55,14 +55,19 @@ export function Registro() {
                     <h1 className={styles.h1}>Registrate aquí</h1>
                     <form action={submitForm} className={styles.form}>
                         <SelectForm selectName="tipo" listOptions={userTypes} labelValue="Seleccione el tipo de usuario" onFunction={handleChange} />
-                        <h2>Datos personales</h2>
-                        <InputForm labelValue="Nombre: " inputName="name" />
-                        <InputForm labelValue="Correo: " inputName="email" inputType="email" />
-                        <InputForm labelValue="Telefono: " inputName="phone" inputType="tel" />
-                        <SelectForm selectName="genero" listOptions={generos} labelValue="Generos: " />
-                        <InputForm inputName="fecha" labelValue="Fecha de nacimiento: " inputType="date" />
-                        {formType(userType)}
-                        <button type="submit">Registrar</button>
+                        <fieldset className={styles.fieldset}>
+                            <legend className={styles.legend}>Datos personales</legend>
+                            <InputForm labelValue="Nombre: " inputName="name" inputPlaceholder="Ingresa tu nombre completo nombre completo..." />
+                            <InputForm labelValue="Correo: " inputName="email" inputType="email" inputPlaceholder="example@domain.com" />
+                            <InputForm labelValue="Telefono: " inputName="phone" inputType="tel" inputPlaceholder="XXX-XXX-XX-XX" />
+                            <InputForm inputName="fecha" labelValue="Fecha de nacimiento: " inputType="date" />
+                            <SelectForm selectName="genero" listOptions={generos} labelValue="Genero" />
+                        </fieldset>
+                        <fieldset className={styles.fieldset}>
+                            <legend className={styles.legend}>Otros datos</legend>
+                            {formType(userType)}
+                        </fieldset>
+                        <button type="submit" className={styles.sendButton}>Registrar</button>
                     </form>
                 </div>
             </div>

@@ -1,21 +1,22 @@
 import Quagga from "quagga"
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 
-export function Scanner() {
+import styles from '../assets/styles/Scanner.module.css'
+
+export function Scanner({ onDetected }) {
 
     const scannerRef = useRef(null)
-    const [matricula, setMatricula] = useState("")
 
     useEffect(() => {
         Quagga.init({
             inputStream: {
                 target: scannerRef.current,
                 type: "LiveStream",
-                constrains: {
-                    width: { min: 60 },
+                constraints: {
+                    width: { min: 640 },
                     height: { min: 480 },
                     facingMode: "environment",
-                    aspecRatio: { min: 1, max: 2 }
+                    aspectRatio: { min: 1, max: 2 }
                 }
             },
             decoder: {
@@ -28,19 +29,19 @@ export function Scanner() {
             Quagga.start()
         })
         Quagga.onDetected(function (result) {
-            setMatricula(result.codeResult.code)
+            onDetected(result.codeResult.code)
         })
         return () => {
             Quagga.stop()
             Quagga.offDetected()
         }
-    })
+    }, [onDetected])
 
     return (
         <>
-            <div ref={scannerRef} style={{ width: "100%", height: "300px" }}>
+            <div ref={scannerRef} className={styles.scannerContainer}>
+                <div className={styles.scannerOverlay}></div>
             </div>
-            <p>Bienvenido {matricula}</p>
         </>
     )
 }

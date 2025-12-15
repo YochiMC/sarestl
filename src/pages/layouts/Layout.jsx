@@ -10,9 +10,9 @@ export function Layout({ children }) {
     return (
         <>
             <Header />
-            <div>
+            <main>
                 {children}
-            </div>
+            </main>
             <Footer />
         </>
     )

@@ -5,11 +5,26 @@ export function Visitas() {
         <>
             <div className={styles.mainContainer}>
                 <div className={styles.container}>
-                    <h1 className={styles.h1}>Holap gentecita, son bievenidos al campus</h1>
-                    <p>Por favorcito, registrate en el forms o manda correo o manda mensaje a tal lado.</p>
-                    <a href="#">Enlace</a>
+                    <h1 className={styles.h1}>Visita el campus</h1>
+                    <article className={styles.instrucioncitas}>
+                        <header >
+                            <h2>Instrucciones para agendar tu cita</h2>
+                        </header>
+                        <ol className={styles.lista} type='I'>
+                            <li className={styles.item}>Hay que dar clic en el enlace.</li>
+                            <li className={styles.item}>Llena el formulario con tus datos</li>
+                            <li className={styles.item}>Elige la fecha y hora que más te convenga</li>
+                            <li className={styles.item}>Envía el formulario y espera la confirmación</li>
+                        </ol>
+                        <footer>
+                            <small>En caso de dudas contactar al correo sarestl@gmail.com</small>
+                        </footer>
+                    </article>
+                    <a href="https://forms.gle/7QDq8WDrrysN1udM7" target='_blank' className={styles.enlace}>Clic aquí para agendar</a>
+                    <p>Estamos trabajando para dar un mejor servicio, agredecemos tu paciencia.</p>
                 </div>
             </div>
+
         </>
     )
 }

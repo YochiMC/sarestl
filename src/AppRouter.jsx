@@ -32,10 +32,10 @@ export function AppRouter() {
         <Route path="/crud" element={<LayoutAdmin children={<Crud />} />} />
         <Route path="/notificaciones" element={<LayoutAdmin children={<Notificaciones />} />} />
         <Route path="/historial-registros-usuarios" element={<LayoutAdmin children={<HistorialRegUsers />} />} />
-        <Route path="/ManualMiembros" element={<Layout children={<ManualUsuarioMiembros />} />} />
-        <Route path="/Perfil" element={<Layout children={<Perfil />} />} />
-        <Route path="/VisualizacionGeneral" element={<Layout children={<VisualizacionGeneral />} />} />
-        <Route path="/restaurar-contraseña" element={<Layout children={<RestaurarContraseña />} />} />
+        <Route path="/ManualMiembros" element={<LayoutAdmin children={<ManualUsuarioMiembros />} />} />
+        <Route path="/Perfil" element={<LayoutAdmin children={<Perfil />} />} />
+        <Route path="/VisualizacionGeneral" element={<LayoutAdmin children={<VisualizacionGeneral />} />} />
+        <Route path="/restaurar-contraseña" element={<LayoutAdmin children={<RestaurarContraseña />} />} />
       </Routes>
     </BrowserRouter>
   )
