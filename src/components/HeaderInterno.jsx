@@ -1,14 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import sepLogo from '../assets/img/sep.png';
 import tecnmLogo from '../assets/img/tecnm.jpg';
 import itlLogo from '../assets/img/itl.png';
 import saresLogo from '../assets/img/sares.jpeg'
 import userFoto from '../assets/img/usuario.jpg';
+import ModalCerrarSesion from "../components/ModalCS";
 
 function Header() {
     const [menuAbierto, setMenuAbierto] = useState(false);
     const [menuNotifAbierto, setMenuNotifAbierto] = useState(false);
+    const [mostrarModal, setMostrarModal] = useState(false);
+
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -23,6 +26,24 @@ function Header() {
         setMenuAbierto(false);
     };
 
+    useEffect(() => {
+        setMenuAbierto(false);
+        setMenuNotifAbierto(false);
+    }, [location.pathname]);
+
+    const irAPerfil = () => {
+        navigate("/perfil");
+    };
+
+    const abrirModalCerrarSesion = () => {
+        setMenuAbierto(false);
+        setMostrarModal(true);
+    };
+
+    const confirmarCerrarSesion = () => {
+        setMostrarModal(false);
+        navigate("/");
+    };
 
     return (
         <div className="header-int" >
@@ -45,12 +66,12 @@ function Header() {
                 {/* ----------------------------------- Aqui van los menús ---------------------------------- */}
                 {menuAbierto && (
                     <div className="menu-usuario">
-                        <button className="menu-item">
+                        <button className="menu-item" onClick={irAPerfil}>
                             <i className="fas fa-user-circle icono-menu"></i>
                             Perfil
                         </button>
 
-                        <button className="menu-item">
+                        <button className="menu-item" onClick={abrirModalCerrarSesion}>
                             <i className="fas fa-sign-out-alt icono-menu"></i>
                             Cerrar sesión
                         </button>
@@ -80,6 +101,14 @@ function Header() {
                             }}>Ver todas</p>
                         </div>
                     </div>
+                )}
+
+                {/* MODALS */}
+                {mostrarModal && (
+                    <ModalCerrarSesion
+                        onConfirmar={confirmarCerrarSesion}
+                        onCancelar={() => setMostrarModal(false)}
+                    />
                 )}
 
             </div>

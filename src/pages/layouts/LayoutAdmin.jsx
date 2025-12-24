@@ -4,6 +4,7 @@ import { Menu } from '../../components/Menu';
 import '../../assets/styles/crud.css'
 import '../../assets/styles/notificaciones.css'
 import '../../assets/styles/modalA.css'
+import '../../assets/styles/modalCS.css'
 
 const role = "guardia"
 
