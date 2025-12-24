@@ -1,11 +1,15 @@
 import styles from '../assets/styles/Visitas.module.css'
+import itlLogo from '../assets/img/itl.png';
 
 export function Visitas() {
     return (
         <>
             <div className={styles.mainContainer}>
                 <div className={styles.container}>
-                    <h1 className={styles.h1}>Visita el campus</h1>
+                    <h1 className={styles.h1}>Agenda tu cita para acceder al ITL</h1>
+                    <div className="profile-photo-container">
+                        <img src={itlLogo} className={styles.visita_logo} alt="ITL" />
+                    </div>
                     <article className={styles.instrucioncitas}>
                         <header >
                             <h2>Instrucciones para agendar tu cita</h2>
@@ -17,7 +21,7 @@ export function Visitas() {
                             <li className={styles.item}>Envía el formulario y espera la confirmación</li>
                         </ol>
                         <footer>
-                            <small>En caso de dudas contactar al correo sarestl@gmail.com</small>
+                            <small>En caso de dudas contactar al correo sarestlsystem@hotmail.com</small>
                         </footer>
                     </article>
                     <a href="https://forms.gle/7QDq8WDrrysN1udM7" target='_blank' className={styles.enlace}>Clic aquí para agendar</a>

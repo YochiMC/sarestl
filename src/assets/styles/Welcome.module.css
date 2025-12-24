@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 900px;
+    height: 950px;
     width: 100%;
     text-align: center;
 }
@@ -20,6 +20,7 @@
 }
 
 .advice{
+    margin-top: 0.5em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,4 +31,19 @@
 
 .h1{
     color: black;
+}
+.enlace {
+    margin-top: 0.5em;
+    color: black;
+    text-decoration: none;
+    background: rgb(143, 171, 212);    
+    text-align: center;    
+    padding: 5px 20px;    
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.enlace:hover {
+    color: rgb(19, 19, 95);
 }
