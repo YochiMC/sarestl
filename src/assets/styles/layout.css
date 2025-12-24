@@ -501,6 +501,10 @@
   flex-wrap: wrap;
 }
 
+.footer p {
+  color: white;
+}
+
 @media (max-width: 480px) {
   .footer {
     padding: 20px;
