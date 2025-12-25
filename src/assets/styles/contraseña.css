@@ -2,8 +2,8 @@
 .ContenidoPrincipal {
     display: flex;
     justify-content: center;
+    width: 100%;
 }
-
 .OlvidarContraseña-Container {
     margin-top: 30px;
     width: 400px;
@@ -21,7 +21,6 @@
     justify-content: center;
     margin-bottom: 20px;
     align-items: center;
-    height: auto;
 }
 
 .logotipo-sares {
@@ -51,18 +50,35 @@ h2 {
 
 .form-return {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
     justify-content: center;
+    align-items: center;
     margin-top: 5px;
 }
 
-/*Responsividad*/
-/*chiquitos*/
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.password-container input {
+    width: 100%;
+    padding-right: 2.5rem;
+}
+
+.password-container i {
+    position: absolute;
+    right: 0.5rem;
+    top: 35%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* ================= RESPONSIVIDAD ================ */
 @media (max-width: 480px) {
     .OlvidarContraseña-Container {
-        width: 90%;
+        width: 80% !important;
         padding: 15px;
         margin-top: 20px;
     }
@@ -84,14 +100,18 @@ h2 {
     .form-return {
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+    }
+
+    .password-container i {
+        right: 0.5rem !important;
+        font-size: 0.8rem;
+        top: 35% !important;
     }
 }
 
-/* tablets segun gugul*/
 @media (max-width: 768px) {
     .OlvidarContraseña-Container {
-        width: 90%;
+        width: 80%;
         padding: 15px;
     }
 
@@ -113,9 +133,14 @@ h2 {
         flex-direction: column;
         align-items: center;
     }
+
+    .password-container i {
+        right: 0.5rem !important;
+        font-size: 0.8rem;
+        top: 35% !important;
+    }
 }
 
-/* grandes */
 @media (min-width: 1024px) {
     .OlvidarContraseña-Container {
         width: 400px;
@@ -140,4 +165,5 @@ h2 {
         flex-direction: row;
         align-items: center;
     }
+
 }

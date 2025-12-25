@@ -160,7 +160,23 @@
     cursor: pointer;
 }
 
-/*estilos para responvidad*/
+.password-container-perfil {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-container-perfil i {
+    position: absolute;
+    right: 0.5rem;
+    cursor: pointer;
+    font-size: 0.85rem;
+    color: #555;
+    top: -1rem;
+    padding-right: 10px;
+}
+
+/*estilos para responsividad*/
 /*chiquis*/
 @media (max-width: 480px) {
     .main-content_perfil {

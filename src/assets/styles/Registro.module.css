@@ -1,49 +1,76 @@
-.mainContainer{
+.mainContainer {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
+    padding: 20px 0;
+    box-sizing: border-box;
 }
 
-.container{
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: white;
     border-radius: 20px;
-    height: 100%;
     width: 80%;
+    max-width: 1200px;
     margin: 20px;
+    padding: 2em 1em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
 
-.form{
+.profilePhotoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1em 0;
+}
+
+.profilePhoto {
+    width: 80px;
+    height: 80px;
+    opacity: 0.7;
+}
+
+.form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 1em;
-    height: 100%;
-    width: 80%;
-    margin: 2em;
+    width: 100%;
+    max-width: 800px;
+    margin: 1em 0;
 }
 
-.fieldset{
+.fieldset {
     display: flex;
     flex-direction: column;
     width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1.5em;
+    box-sizing: border-box;
 }
 
-.legend{
+.legend {
     font-size: 1.2em;
     margin-bottom: 1em;
-    color:black;
+    color: black;
+    font-weight: 600;
 }
 
-.h1{
-    margin-top: 1em;
+.h1 {
+    margin-top: 0.5em;
     color: black;
+    text-align: center;
+    padding: 0 1em;
+    font-size: 1.5em;
+    line-height: 1.4;
 }
 
 .sendButton {
@@ -52,11 +79,229 @@
     border: none;
     border-radius: 10px;
     height: 2.5em;
-    width: 10em;
+    width: 12em;
     cursor: pointer;
-    font-size: 1em;
-}  
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 1em;
+}
 
 .sendButton:hover {
     background-color: rgba(41, 128, 185, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(41, 128, 185, 0.3);
+}
+
+.sendButton:active {
+    transform: translateY(0);
+}
+
+.passwordContainer {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.passwordContainer i {
+    position: absolute;
+    right: 4rem;
+    top: 4rem;
+    cursor: pointer;
+    color: #666;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    z-index: 10;
+}
+
+.passwordContainer i:hover {
+    color: rgba(111, 174, 238, 1);
+}
+
+/* ================================ RESPONSIVIDAD ================================ */
+
+@media (max-width: 1024px) {
+    .container {
+        width: 85%;
+        padding: 1.5em 1em;
+    }
+
+    .form {
+        width: 92%;
+    }
+
+    .h1 {
+        font-size: 1.4em;
+    }
+
+    .legend {
+        font-size: 1.15em;
+    }
+
+    .fieldset {
+        padding: 1.3em;
+    }
+}
+
+@media (max-width: 768px) {
+    .mainContainer {
+        padding: 15px 0;
+    }
+
+    .container {
+        width: 90%;
+        margin: 15px;
+        border-radius: 15px;
+        padding: 1.5em 0.8em;
+    }
+
+    .profilePhoto {
+        width: 70px;
+        height: 70px;
+    }
+
+    .form {
+        width: 95%;
+        gap: 0.8em;
+    }
+
+    .h1 {
+        font-size: 1.2em;
+        margin-top: 0.3em;
+        padding: 0 0.5em;
+    }
+
+    .fieldset {
+        padding: 1.2em;
+    }
+
+    .legend {
+        font-size: 1.05em;
+        margin-bottom: 0.8em;
+    }
+
+    .sendButton {
+        width: 100%;
+        max-width: 300px;
+        height: 2.8em;
+        font-size: 1em;
+    }
+
+    .passwordContainer i {
+        right: 3rem !important;
+        top: 3.8rem !important;
+        font-size: 0.9em;
+    }
+
+
+}
+
+@media (max-width: 640px) {
+    .passwordContainer i {
+        right: 2.3rem !important;
+        top: 3.8rem !important;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 580px) {
+    .passwordContainer i {
+        right: 1.8rem !important;
+        top: 3.8rem !important;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .mainContainer {
+        padding: 10px 0;
+    }
+
+    .container {
+        width: 95%;
+        margin: 10px;
+        border-radius: 12px;
+        padding: 1.2em 0.6em;
+    }
+
+    .profilePhoto {
+        width: 60px;
+        height: 60px;
+    }
+
+    .form {
+        width: 98%;
+        gap: 0.6em;
+        margin: 0.8em 0;
+    }
+
+    .h1 {
+        font-size: 1.05em;
+        margin-top: 0.3em;
+        padding: 0 0.3em;
+    }
+
+    .fieldset {
+        padding: 1em;
+        border-radius: 8px;
+    }
+
+    .legend {
+        font-size: 1em;
+        margin-bottom: 0.7em;
+    }
+
+    .sendButton {
+        width: 100%;
+        height: 3em;
+        font-size: 0.95em;
+        border-radius: 8px;
+    }
+
+    .passwordContainer i {
+        right: 1.5rem !important;
+        top: 3.5rem !important;
+        font-size: 0.9em;
+    }
+
+}
+
+
+@media (max-width: 360px) {
+    .container {
+        width: 98%;
+        margin: 5px;
+        border-radius: 10px;
+        padding: 1em 0.5em;
+    }
+
+    .profilePhoto {
+        width: 50px;
+        height: 50px;
+    }
+
+    .h1 {
+        font-size: 0.95em;
+        margin-top: 0.2em;
+    }
+
+    .fieldset {
+        padding: 0.8em;
+    }
+
+    .legend {
+        font-size: 0.95em;
+    }
+
+    .sendButton {
+        font-size: 0.9em;
+        height: 3em;
+    }
+
+    .passwordContainer i {
+        right: 1.2rem !important;
+        top: 3.5rem !important;
+        font-size: 0.9em;
+    }
 }

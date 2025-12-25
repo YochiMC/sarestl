@@ -4,6 +4,8 @@ import { SelectForm } from "../components/forms/SelectForm"
 import styles from '../assets/styles/Registro.module.css'
 
 export function Registro() {
+    const [showPassword, setShowPassword] = useState(false)
+    const [showConfirmPassword, setShowConfirmPassword] = useState(false)
 
     const carreras = [{ "id": 1, "value": "Ingeniería en Sistemas Computacionales" }, { "id": 2, "value": "Ingeniería en Gestión Empresarial" }, { "id": 3, "value": "Ingeniería Industrial" }, { "id": 4, "value": "Ingeniería en Tecnologías de la Información y Comunicación" }, { "id": 5, "value": "Ingeniería en Logística" }, { "id": 6, "value": "Ingeniería en Electromecánica" }, { "id": 7, "value": "Ingeniería en Electrónica" }, { "id": 8, "value": "Ingeniería en Mecatrónica" }]
     const generos = [{ "id": 1, "value": "Masculino" }, { "id": 2, "value": "Femenino" }, { "id": 3, "value": "Otro" }]
@@ -22,24 +24,24 @@ export function Registro() {
 
     function formType(value) {
         switch (value) {
-            case "alumno":
+            case "Estudiante":
                 return (
                     <>
                         <SelectForm selectName="carrera" listOptions={carreras} labelValue="Carrera " />
                         <InputForm labelValue="Semestre: " inputName="semestre" inputType="number" inputPlaceholder="Válidos del 1 - 13" />
                     </>
                 )
-            case "docente":
-            case "administrador":
+            case "Docente":
+            case "Administrador":
                 return (
                     <InputForm labelValue="Departamento: " inputName="departamento" inputPlaceholder="Ingresa el departamento al que perteneces..." />
                 )
-            case "guardia":
-            case "intendente":
+            case "Guardia":
+            case "Intendente":
                 return (
                     <InputForm labelValue="Empresa: " inputName="empresa" inputPlaceholder="Ingresa el nombre de la empresa a la que perteneces..." />
                 )
-            case "administrativo":
+            case "Administrativo":
                 return (
                     <InputForm labelValue="Area: " inputName="area" inputPlaceholder="Ingresa el nombre del area al que perteneces...|" />
                 )
@@ -81,7 +83,21 @@ export function Registro() {
                             <InputForm inputName="fecha" labelValue="Fecha de nacimiento: " inputType="date" />
                             <SelectForm selectName="genero" listOptions={generos} labelValue="Genero" />
                             <InputForm labelValue="Usuario" inputName="user" inputPlaceholder="Ingresa tu clave y/o No. de control" />
-                            <InputForm labelValue="Contraseña" inputName="password" inputPlaceholder="Ingresa tu contraseña" />
+                            <div className={styles.passwordContainer}>
+                                <InputForm labelValue="Contraseña" inputName="password" inputType={showPassword ? "text" : "password"} inputPlaceholder="Ingresa tu contraseña" />
+                                <i
+                                    className={`fa-solid ${showPassword ? "fa-eye-slash" : "fa-eye"}`}
+                                    onClick={() => setShowPassword(!showPassword)}
+                                ></i>
+                            </div>
+
+                            <div className={styles.passwordContainer}>
+                                <InputForm labelValue="Confirmar contraseña" inputName="confirmPassword" inputType={showConfirmPassword ? "text" : "password"} inputPlaceholder="Vuelve a ingresar tu contraseña" />
+                                <i
+                                    className={`fa-solid ${showConfirmPassword ? "fa-eye-slash" : "fa-eye"}`}
+                                    onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                                ></i>
+                            </div>
                         </fieldset>
                         <fieldset className={styles.fieldset}>
                             <legend className={styles.legend}>Otros datos</legend>

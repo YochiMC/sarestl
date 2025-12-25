@@ -1,6 +1,11 @@
 import "../assets/styles/Perfil.css";
+import { useState } from "react";
 
 export function Perfil() {
+    const [showCurrent, setShowCurrent] = useState(false);
+    const [showNew, setShowNew] = useState(false);
+    const [showConfirm, setShowConfirm] = useState(false);
+
     return (
         <>
             <div className="main-content_perfil">
@@ -12,8 +17,8 @@ export function Perfil() {
 
                     <div className="profile-card">
                         <div className="profile-header">
-                            <div className="profile-photo-container">                                
-                                <svg 
+                            <div className="profile-photo-container">
+                                <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     width="16"
                                     height="16"
@@ -22,12 +27,12 @@ export function Perfil() {
                                     id="profile-photo"
                                     viewBox="0 0 16 16"
                                 >
-                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-                                    <path   
-                                    fillRule="evenodd"
-                                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"
+                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                                    <path
+                                        fillRule="evenodd"
+                                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"
                                     />
-                                </svg> 
+                                </svg>
                                 <label for="photo-upload" class="photo-overlay" title="Cambiar foto">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -52,34 +57,26 @@ export function Perfil() {
                                     <div class="form-row">
                                         <div class="form-group">
                                             <label for="current-password">Contraseña actual</label>
-                                            <div class="input-with-icon">
-                                                <input type="password" id="current-password" placeholder="••••••••" />
-                                                <span class="toggle-password" onclick="togglePasswordVisibility('current-password')">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                        <path
-                                                            d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z">
-                                                        </path>
-                                                        <circle cx="12" cy="12" r="3"></circle>
-                                                    </svg>
+                                            <div class="password-container-perfil">
+                                                <input type={showCurrent ? "text" : "password"} id="current-password" placeholder="••••••••" />
+                                                <span
+                                                    className="toggle-password"
+                                                    onClick={() => setShowCurrent(!showCurrent)}
+                                                >
+                                                    <i className={`fa-solid ${showCurrent ? "fa-eye-slash" : "fa-eye"}`}></i>
                                                 </span>
                                             </div>
                                         </div>
 
                                         <div class="form-group">
                                             <label for="new-password">Nueva contraseña</label>
-                                            <div class="input-with-icon">
-                                                <input type="password" id="new-password" placeholder="••••••••" />
-                                                <span class="toggle-password" onclick="togglePasswordVisibility('new-password')">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                        <path
-                                                            d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z">
-                                                        </path>
-                                                        <circle cx="12" cy="12" r="3"></circle>
-                                                    </svg>
+                                            <div class="password-container-perfil">
+                                                <input type={showNew ? "text" : "password"} id="new-password" placeholder="••••••••" />
+                                                <span
+                                                    className="toggle-password"
+                                                    onClick={() => setShowNew(!showNew)}
+                                                >
+                                                    <i className={`fa-solid ${showNew ? "fa-eye-slash" : "fa-eye"}`}></i>
                                                 </span>
                                             </div>
                                         </div>
@@ -88,19 +85,18 @@ export function Perfil() {
                                     <div class="form-row">
                                         <div class="form-group">
                                             <label for="confirm-password">Confirmar nueva contraseña</label>
-                                            <div class="input-with-icon">
-                                                <input type="password" id="confirm-password" placeholder="••••••••" />
-                                                <span class="toggle-password" onclick="togglePasswordVisibility('confirm-password')">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                        <path
-                                                            d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z">
-                                                        </path>
-                                                        <circle cx="12" cy="12" r="3"></circle>
-                                                    </svg>
+                                            <div class="password-container-perfil">
+                                                <input type={showConfirm ? "text" : "password"} id="confirm-password" placeholder="••••••••" />
+                                                <span
+                                                    className="toggle-password"
+                                                    onClick={() => setShowConfirm(!showConfirm)}
+                                                >
+                                                    <i className={`fa-solid ${showConfirm ? "fa-eye-slash" : "fa-eye"}`}></i>
                                                 </span>
                                             </div>
+                                        </div>
+                                        <div class="form-group">
+
                                         </div>
                                     </div>
                                 </div>
@@ -138,8 +134,8 @@ export function Perfil() {
                         </div>
 
                     </div>
-                </div>
-            </div>
+                </div >
+            </div >
         </>
     )
 }

@@ -124,6 +124,23 @@ input {
 }
 
 
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-container i {
+    position: absolute;
+    right: 0.5rem;
+    cursor: pointer;
+    font-size: 0.85rem;
+    color: #555;
+    top: 0.9rem;
+    padding-right: 5px;
+}
+
+
 /* ------------------------------------ RESPONSIVIDAD -------------------------------------- */
 
 @media (max-width: 900px) {

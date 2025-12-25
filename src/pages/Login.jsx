@@ -1,7 +1,10 @@
 import saresLogo from '../assets/img/sares.jpeg'
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 export function Login() {
+    const [showPassword, setShowPassword] = useState(false);
+
     return (
         <>
             <div className="contenido">
@@ -25,13 +28,20 @@ export function Login() {
                             />
 
                             <label htmlFor="password">Contraseña</label>
-                            <input
-                                type="password"
-                                id="password"
-                                name="password"
-                                placeholder="••••••••"
-                                required
-                            />
+                            <div class="password-container">
+                                <input
+                                    type={showPassword ? "text" : "password"}
+                                    id="password"
+                                    name="password"
+                                    placeholder="••••••••"
+                                    required
+                                />
+                                <i
+                                    className={`fa-solid ${showPassword ? "fa-eye-slash" : "fa-eye"}`}
+                                    onClick={() => setShowPassword(!showPassword)}
+                                    
+                                ></i>
+                            </div>
 
                             <button type="submit" className="btn-login">
                                 Iniciar Sesión
@@ -39,11 +49,11 @@ export function Login() {
                         </form>
 
                         <div className="form-options">
-                            <Link to="/ManualMiembros" className="link">
+                            <Link to="/olvidar-contraseña" className="link">
                                 ¿Olvidaste tu contraseña?
                             </Link>
                         </div>
-                        
+
                         <div className="extra-options">
                             <p>¿No tienes cuenta?</p>
                             <Link to="/registro" className="link">
