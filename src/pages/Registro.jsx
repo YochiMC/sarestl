@@ -11,7 +11,7 @@ export function Registro() {
     const generos = [{ "id": 1, "value": "Masculino" }, { "id": 2, "value": "Femenino" }, { "id": 3, "value": "Otro" }]
     const userTypes = [{ "id": 1, "value": "Estudiante" }, { "id": 2, "value": "Docente" }, { "id": 3, "value": "Administrador" }, { "id": 4, "value": "Administrativo" }, { "id": 5, "value": "Intendente" }, { "id": 6, "value": "Guardia" }]
 
-    const [userType, setUserType] = useState("alumno")
+    const [userType, setUserType] = useState("Estudiante")
 
     function handleChange(event) {
         setUserType(event.target.value)
